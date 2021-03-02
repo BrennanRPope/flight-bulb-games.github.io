@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-<body>
+##Flight Bulb Games
 
-<h2>Flight Bulb Games</h2>
-
-<img src="content/IMG_4223.PNG" alt="Flight Bulb Games" width="500px";height="600px";/>
-
-</body>
-</html>
+![Flight Bulb Games](/content/IMG_4223.PNG)
