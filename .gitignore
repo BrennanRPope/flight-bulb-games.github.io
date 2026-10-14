@@ -1,29 +1,36 @@
-# Nuxt build output
-.output
-.data
-.nuxt
-.nitro
-.cache
-dist
-
-# Dependencies
-node_modules
-
-# Logs
-logs
-*.log
-
-# Misc
-.DS_Store
-.fleet
-.idea
-.vscode/*
-!.vscode/extensions.json
-
-# Local env files
+# Secrets never enter this repository. Git history is permanent, so a file
+# committed once is committed forever. The site is static and should not need
+# any, but Cloudflare tokens and .env files are the shapes that would show up
+# first, so they are blocked before anyone has a reason to create one.
 .env
 .env.*
 !.env.example
+.dev.vars
+*.token
+.wrangler/
 
-# Cloudflare
-.wrangler
+# Build output. Cloudflare builds from source on every push; a committed
+# dist/ would be stale the moment the source changed.
+.output/
+.data/
+.nuxt/
+.nitro/
+.cache/
+dist/
+
+# Dependencies. package-lock.json IS committed: Cloudflare installs from it
+# with npm ci, and see docs/product-decisions.md section 3 for why it matters.
+node_modules/
+
+# Logs
+logs/
+*.log
+
+# Editors
+.fleet/
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# macOS
+.DS_Store

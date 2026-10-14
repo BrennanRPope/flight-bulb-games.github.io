@@ -6,7 +6,7 @@ The Flight Bulb Games studio site: a Nuxt 4 app that generates static files for
 Cloudflare Pages. One page today. Games live elsewhere: each game gets its own
 repo and its own subdomain, and this site links out to them.
 
-Read [`docs/decisions.md`](docs/decisions.md) before changing anything
+Read [`docs/product-decisions.md`](docs/product-decisions.md) before changing anything
 structural. It records what was settled and what it was settled against.
 
 ## Never invent facts about the games

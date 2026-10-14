@@ -8,9 +8,10 @@ waiting for real copy: the studio intro, the Nines pitch, the about text and the
 contact address. Nothing is live on Cloudflare yet; `main` still serves the old
 GitHub Pages site.
 
-- [`docs/decisions.md`](docs/decisions.md): what is settled, what is not, and why
-- [`CLAUDE.md`](CLAUDE.md): working rules for anyone writing here
-- [`app/pages/index.vue`](app/pages/index.vue): the homepage; all site copy sits
+- [`docs/product-decisions.md`](docs/product-decisions.md) — what is settled,
+  what is not, and why
+- [`CLAUDE.md`](CLAUDE.md) — working rules for anyone writing here
+- [`app/pages/index.vue`](app/pages/index.vue) — the homepage; all site copy sits
   at the top of the file
 
 ## Local development

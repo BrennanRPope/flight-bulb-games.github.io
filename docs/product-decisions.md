@@ -1,4 +1,4 @@
-# Flight Bulb Games: site decisions
+# Flight Bulb Games — product decisions
 
 Everything settled so far, what it was settled against, and what is still open.
 Written so that picking this up cold does not mean re-deriving it.
