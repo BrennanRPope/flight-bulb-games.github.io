@@ -1,0 +1,116 @@
+:root {
+  --cream: #F7F1E6;
+  --cream-2: #EFE5D3;
+  --ink: #2B1A10;
+  --brown: #4A2E1E;
+  --brown-soft: #6B4A36;
+  --muted: #6E5A4C;
+  --amber: #F2B705;
+  --line: #DCCDB4;
+  --display: 'Bricolage Grotesque', Georgia, serif;
+  --body: 'Atkinson Hyperlegible', system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--brown); }
+a:hover { color: var(--ink); }
+:focus-visible { outline: 3px solid var(--amber); outline-offset: 3px; border-radius: 6px; }
+
+h1, h2, h3 { font-family: var(--display); font-weight: 800; color: var(--brown); margin: 0; letter-spacing: -0.02em; }
+h2 { font-size: clamp(32px, 4vw, 48px); }
+p { margin: 0; }
+
+.wrap { max-width: 1200px; margin: 0 auto; padding-inline: 24px; }
+.stack { display: flex; flex-direction: column; gap: 40px; }
+.stack-sm { display: flex; flex-direction: column; gap: 16px; color: var(--muted); }
+
+.eyebrow {
+  color: var(--brown-soft);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Header */
+.header { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-block: 20px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--brown); font-family: var(--display); font-weight: 800; font-size: 22px; }
+.nav { display: flex; flex-wrap: wrap; gap: 4px; }
+.nav a { text-decoration: none; color: var(--ink); padding: 10px 14px; border-radius: 999px; }
+.nav a:hover { background: var(--cream-2); }
+
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  align-items: center;
+  gap: 48px;
+  padding-block: 56px 96px;
+}
+.hero-text { display: flex; flex-direction: column; gap: 24px; }
+.hero h1 { font-size: clamp(44px, 6.5vw, 88px); line-height: 1; letter-spacing: -0.03em; max-width: 12ch; }
+.lede { font-size: 20px; color: var(--muted); max-width: 52ch; }
+.hero-logo { justify-self: center; width: min(100%, 440px); }
+
+/* Buttons */
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px; }
+.btn {
+  display: inline-flex; align-items: center; min-height: 48px;
+  padding: 12px 26px; border-radius: 999px;
+  font-weight: 700; text-decoration: none;
+}
+.btn-primary { background: var(--brown); color: var(--cream); box-shadow: 0 0 0 0 var(--amber); transition: box-shadow .2s; }
+.btn-primary:hover { color: var(--cream); box-shadow: 0 0 0 4px var(--amber); }
+.btn-ghost { border: 1.5px solid var(--brown); color: var(--brown); }
+.btn-ghost:hover { background: var(--cream-2); }
+
+/* Games */
+.band { background: var(--cream-2); padding-block: 96px; }
+.game {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  overflow: hidden;
+}
+.game-art {
+  min-height: 340px; display: flex; align-items: center; justify-content: center;
+  background: var(--brown);
+}
+.game-art span { font-family: var(--display); font-weight: 800; font-size: 200px; line-height: 1; color: var(--amber); letter-spacing: -0.06em; }
+.game-body { padding: 48px 40px; display: flex; flex-direction: column; justify-content: center; gap: 18px; color: var(--muted); }
+.game-body h3 { font-size: 56px; line-height: 1; letter-spacing: -0.03em; }
+.meta { font-size: 16px; }
+
+/* About */
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: 48px;
+  padding-block: 96px;
+}
+
+/* Footer */
+.footer { border-top: 1px solid var(--line); padding-block: 36px; color: var(--muted); font-size: 16px; }
+.footer-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 20px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn-primary { transition: none; }
+}

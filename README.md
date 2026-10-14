@@ -1,37 +1,30 @@
-## Welcome to GitHub Pages
+# Flight Bulb Games
 
-You can use the [editor on GitHub](https://github.com/BrennanRPope/flight-bulb-games.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+The studio website for Flight Bulb Games, built with [Nuxt](https://nuxt.com) and hosted on Cloudflare Pages.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Local development
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```bash
+npm install
+npm run dev        # http://localhost:3000
+npm run generate   # static build into dist/
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Site copy (tagline, intro, Nines pitch, about text, contact email) lives at the top of `app/pages/index.vue`. Anything in `[brackets]` is still placeholder text.
 
-### Jekyll Themes
+The original logo artwork is `content/IMG_4223.PNG`. The web-sized versions in `public/` were made from it.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/BrennanRPope/flight-bulb-games.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Deploying to Cloudflare Pages
 
-### Support or Contact
+1. **Move DNS to Cloudflare.** In the Cloudflare dashboard, add `flightbulbgames.com` as a site (Free plan). Cloudflare imports your existing records and gives you two nameservers. Set those nameservers at your registrar, then wait until Cloudflare shows the domain as Active.
+2. **Create the Pages project.** Go to Workers & Pages → Create → Pages → Connect to Git, and pick this repo.
+   - Framework preset: **Nuxt.js**
+   - Build command: `npm run generate`
+   - Build output directory: `dist`
+   - Node version comes from `.nvmrc` (22).
+3. **Attach the domain.** In the project, open Custom domains and add `flightbulbgames.com`, then `www.flightbulbgames.com`. With DNS on Cloudflare, the records are created for you.
+4. **Turn off GitHub Pages** for this repo (Settings → Pages) so the old site isn't also live.
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Nines on its own subdomain
+
+Nines gets its own repo and its own Cloudflare Pages project. Add `nines.flightbulbgames.com` as that project's custom domain. The "Play Nines" buttons on this site already point there.
