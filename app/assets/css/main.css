@@ -78,9 +78,18 @@ p { margin: 0; }
 .btn-ghost { border: 1.5px solid var(--brown); color: var(--brown); }
 .btn-ghost:hover { background: var(--cream-2); }
 
-/* Games */
 .band { background: var(--cream-2); padding-block: 96px; }
-.game {
+.meta { font-size: 16px; color: var(--brown-soft); }
+
+.tag {
+  display: inline-flex; align-items: center;
+  padding: 4px 12px; border-radius: 999px;
+  background: var(--cream-2); color: var(--brown);
+  font-size: 14px; font-weight: 700; letter-spacing: 0.04em;
+}
+
+/* Start here: the featured game */
+.feature {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr));
   background: var(--cream);
@@ -88,21 +97,49 @@ p { margin: 0; }
   border-radius: 24px;
   overflow: hidden;
 }
-.game-art {
+.feature-art {
   min-height: 340px; display: flex; align-items: center; justify-content: center;
   background: var(--brown);
 }
-.game-art span { font-family: var(--display); font-weight: 800; font-size: 200px; line-height: 1; color: var(--amber); letter-spacing: -0.06em; }
-.game-body { padding: 48px 40px; display: flex; flex-direction: column; justify-content: center; gap: 18px; color: var(--muted); }
-.game-body h3 { font-size: 56px; line-height: 1; letter-spacing: -0.03em; }
-.meta { font-size: 16px; }
+.feature-art span { font-family: var(--display); font-weight: 800; font-size: 200px; line-height: 1; color: var(--amber); letter-spacing: -0.06em; }
+.feature-body { padding: 48px 40px; display: flex; flex-direction: column; justify-content: center; gap: 16px; color: var(--muted); }
+.feature-body h3 { font-size: 56px; line-height: 1; letter-spacing: -0.03em; }
+
+/* The collection grid */
+.collection { padding-block: 96px; display: flex; flex-direction: column; gap: 40px; }
+.collection-head { display: flex; flex-direction: column; gap: 8px; }
+.grid {
+  list-style: none; margin: 0; padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+  gap: 24px;
+}
+.card {
+  display: flex; flex-direction: column;
+  background: var(--cream);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.card-mark {
+  height: 140px; display: flex; align-items: center; justify-content: center;
+  background: var(--brown);
+  font-family: var(--display); font-weight: 800; font-size: 72px; line-height: 1;
+  color: var(--amber); letter-spacing: -0.04em;
+}
+.card-body { flex: 1; padding: 24px; display: flex; flex-direction: column; gap: 10px; color: var(--muted); font-size: 17px; }
+.card-body h3 { font-size: 28px; line-height: 1.1; }
+.card-foot { margin-top: auto; padding-top: 8px; }
+.card-link { font-weight: 700; display: inline-flex; align-items: center; min-height: 44px; }
+
+.card-placeholder { background: transparent; border-style: dashed; border-width: 1.5px; }
+.card-placeholder .card-mark { background: var(--cream-2); color: var(--brown-soft); }
 
 /* About */
 .about {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: 48px;
-  padding-block: 96px;
 }
 
 /* Footer */

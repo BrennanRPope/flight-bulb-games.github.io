@@ -1,12 +1,13 @@
 # Flight Bulb Games
 
-The studio website for Flight Bulb Games, home of Nines.
+The studio website for Flight Bulb Games: a collection of traditional board and
+card games, first designed in the 1990s and being brought forward.
 
-**Status: the homepage is built, the words are not.** The page layout, logo and
-build are done and deploy cleanly. Every line in `[brackets]` is a placeholder
-waiting for real copy: the studio intro, the Nines pitch, the about text and the
-contact address. Nothing is live on Cloudflare yet; `main` still serves the old
-GitHub Pages site.
+**Status: the homepage is built, most of the words are not.** The gallery
+layout, logo and build are done and deploy cleanly. Every line in `[brackets]`
+is a placeholder waiting for real copy: each game's details and hook, the games
+not yet written up, the about text and the contact address. Nothing is live on
+Cloudflare yet; `main` still serves the old GitHub Pages site.
 
 - [`docs/product-decisions.md`](docs/product-decisions.md) — what is settled,
   what is not, and why

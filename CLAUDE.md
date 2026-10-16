@@ -11,7 +11,7 @@ structural. It records what was settled and what it was settled against.
 
 ## Never invent facts about the games
 
-Nothing on this site describes Nines beyond what its maker has written down.
+Nothing on this site describes a game beyond what its maker has written down.
 Genre, platforms, player counts, release dates, features: if it has not been
 stated, it stays a `[bracketed placeholder]`. A placeholder that is obviously a
 placeholder is better than a plausible sentence that is wrong, because the
@@ -22,8 +22,9 @@ numbers.
 
 ## Copy lives in one place
 
-All site copy sits in the `site` and `nines` objects at the top of
-`app/pages/index.vue`. Keep it there. Someone filling in the words should never
+All site copy sits in the `site` object and the `games` list at the top of
+`app/pages/index.vue`. Keep it there. Adding a game is one new entry in
+`games`; choosing the start-here pick is `featuredSlug`. Someone filling in the words should never
 have to read the template to find them.
 
 ## The look comes from the logo
