@@ -16,7 +16,7 @@
 .nuxt/
 .nitro/
 .cache/
-dist/
+dist
 
 # Dependencies. package-lock.json IS committed: Cloudflare installs from it
 # with npm ci, and see docs/product-decisions.md section 3 for why it matters.
